@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="css/index-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <script type="module" src="firebase/firebase-config.js"></script>
+    <script type="module" src="js/firestore-functions.js"></script>
+    <script type="module" src="js/index-function.js"></script>
+</head>
+
+<body>
+    <div class="screen" id="header">
+        <img id="photo" src="img/photo.png" alt="">
+        <nav>
+            <ul>
+                <a href="#projects">Proyectos</a>
+                <a href="#aboutMe">Sobre mi</a>
+                <a href="#contact">contacto</a>
+            </ul>
+        </nav>
+        <a href="#projects">
+            <h1>Mis proyectos</h1>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/ffffff/expand-arrow--v1.png"
+                alt="expand-arrow--v1" />
+        </a>
+    </div>
+
+    <section class="screen" id="projects">
+        <h2>Proyectos</h2>
+        <div id="projectsContainer"></div>
+    </section>
+
+    <section class="screen" id="aboutMe">
+        <div id="aboutMeContainer">
+            <h2>Sobre mi</h2>
+            <p>
+                Mi nombre es Alan Pino, tengo 21 años y actualmente estoy cursando los últimos semestres de la carrera
+                de Ingeniería de Sistemas.
+                Poseo habilidades y conocimientos destacados en el desarrollo de software, con especial enfoque en la
+                creación de aplicaciones móviles.
+                <br>
+                <br>
+                <br> habilidades:
+            </p>
+
+            <div id="skillsContainer">
+                <div class="skill"><img src="https://img.icons8.com/color/48/kotlin.png" alt="">Kotlin</div>
+                <div class="skill"><img src="https://img.icons8.com/color/48/flutter.png" alt="">Flutter</div>
+                <div class="skill"><img src="https://img.icons8.com/color/48/html-5--v1.png" alt="">Html</div>
+                <div class="skill"><img src="https://img.icons8.com/color/48/css3.png" alt="">CSS</div>
+                <div class="skill"><img src="https://img.icons8.com/color/48/javascript--v1.png" alt="">JavaScript</div>
+                <div class="skill"><img src="https://img.icons8.com/color/48/api.png" alt="">APIrest</div>
+                <div class="skill"><img src="https://img.icons8.com/fluency/48/github.png" alt="">GitHub</div>
+                <div class="skill"><img src="https://img.icons8.com/color/48/firebase.png" alt="">Firebase</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screen" id="contact">
+        <h2>Contacto</h2>
+        <div id="container">
+            <div id="socialContainer">
+                <a class="copy">
+                    <div class="social"><img src="https://img.icons8.com/material-rounded/50/mail.png" alt="mail"
+                        class="socialImg" onclick='copyText("alanpinodev@gmail.com")'/>alanpinodev@gmail.com</div>
+                    </a>
+                    <a class="copy">
+                    <div class="social"><img src="https://img.icons8.com/ios-filled/50/phone.png" alt="phone"
+                            class="socialImg">+57 300 7257683</div>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B573007257683&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <div class="social"><img src="https://img.icons8.com/ios-filled/50/whatsapp.png" alt="whatsapp"
+                            class="socialImg" />wa.me/+573007257683</div>
+                </a>
+                <a href="https://github.com/AlanPino" target="_blank">
+                    <div class="social"><img src="https://img.icons8.com/ios-filled/50/github.png" alt="github"
+                            class="socialImg" />github.com/AlanPino</div>
+                </a>
+
+            </div>
+
+
+            <div id="formContainer">
+                <label>Nombre:</label>
+                <input type="text" id="nameInput">
+                <label>Correo electrónico:</label>
+                <input type="email" id="emailInput">
+                <label>Asunto:</label>
+                <input type="text" id="subjectInput">
+                <label>Mensaje:</label>
+                <textarea name="" id="messageInput" cols="30" rows="10"></textarea>
+                <button id="formButton">Enviar</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

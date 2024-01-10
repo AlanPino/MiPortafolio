@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    background-image: url("https://i.pinimg.com/originals/3b/e1/37/3be1379b0e6f83f7431d50145ca6ff57.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header,
+a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+nav {
+    margin-top: 5vh;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul,
+a {
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    margin-top: 20vh;
+    text-align: center;
+    color: white;
+}
+
+.screen {
+    box-sizing: border-box;
+    padding-top: 5vh;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: 2%;
+}
+
+#projects {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 2%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+}
+
+#projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 20px;
+    margin: 2vh 2vw;
+    box-shadow: rgb(107, 107, 107) 0 0 5px;
+}
+
+.cardHeader {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    border: none;
+}
+
+.cardImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.languageIcon {
+    position: absolute;
+    width: 10%;
+    bottom: 2%;
+    right: 2%;
+}
+
+.cardBody {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+h3 {
+    font-size: medium;
+    margin-bottom: 5px;
+}
+
+h4 {
+    font-size: x-small;
+    font-weight: 100;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+button {
+    width: 40%;
+}
+
+.cardButton {
+    margin-top: auto;
+    align-self: center;
+    height: 25%;
+}
+
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aboutMeContainer {
+    background-color: white;
+    align-self: center;
+    text-align: center;
+    padding: 5% 10%;
+}
+
+p {
+    margin-top: 2%;
+}
+
+#skillsContainer {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: rgb(107, 107, 107) 0 0 5px;
+    padding: 1% 1rem;
+    margin: 1%;
+    font-size: small;
+}
+
+.skill img {
+    height: 1rem;
+    margin-right: 10%;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: black;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact #container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+#socialContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.social {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 18rem;
+    height: 4rem;
+    padding-left: 5%;
+    border-radius: 10px;
+    margin: 4px 0;
+    box-shadow: rgb(107, 107, 107) 0 0 5px;
+    background-color: white;
+    color: black;
+}
+
+.socialImg {
+    margin-right: 10%;
+    height: 60%;
+}
+
+.popup {
+    background-color: gray;
+    position: absolute;
+    color: white;
+    font-size: small;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25rem;
+    height: 30rem;
+    background-color: white;
+    padding: 1%;
+    align-self: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+input {
+    height: 5%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+}
+
+#message {
+    height: 50%;
+    padding-top: 1px;
+    box-sizing: border-box;
+}
+
+#formButton {
+    height: 6%;
+    align-self: flex-end;
+}
