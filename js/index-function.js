@@ -95,7 +95,21 @@ async function createCards(projects) {
     })
 };
 
+function showLoading(projectsContainer) {
+    const loading = document.createElement("div");
+    loading.classList.add("loading");
 
+    const text = document.createElement("h3");
+    text.textContent = "Cargando proyectos";
+
+    const img = document.createElement("img");
+    img.src = "./img/loading.gif";
+
+    loading.appendChild(text);
+    loading.appendChild(img);
+
+    projectsContainer.appendChild(loading);
+};
 
 $(document).ready(function () {
     $('a[href^="#"]').on('click', function (event) {
@@ -115,12 +129,20 @@ window.onload = async function () {
     const response = sessionStorage.getItem("projects");
     var projects;
 
+    const projectsContainer = document.getElementById("projectsContainer");
+    
+    showLoading(projectsContainer);
+
     if (response !== null && response !== undefined) {
         projects = JSON.parse(response);
     } else {
         projects = await getProjects();
     }
 
+    projectsContainer.removeChild(projectsContainer.firstChild);
+
     await createCards(projects);
+
+
     sessionStorage.setItem("projects", JSON.stringify(projects));
 };
